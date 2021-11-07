@@ -45,6 +45,7 @@ namespace API.Controllers
                 Token=_tokenService.CreateToken(user)
             };
         }
+
         [HttpPost("login")]
         private async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
@@ -62,7 +63,6 @@ namespace API.Controllers
                 Token=_tokenService.CreateToken(user)
             };
         }
-
 
         private async Task<bool> UserExists(string username)
         {
