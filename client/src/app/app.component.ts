@@ -11,11 +11,13 @@ import { AccountService } from './_services/account.service';
 export class AppComponent implements OnInit{
   title = 'The Music app';
   users: any;
+  song: any;
 
   constructor(private http: HttpClient, private accountService: AccountService) {}
   ngOnInit() {
-    this.getUsers();
+    // this.getUsers();
     this.setCurrentUser();
+    this.getSongs();
   }
 
   
@@ -25,13 +27,21 @@ export class AppComponent implements OnInit{
     this.accountService.setCurrentUser(user);
   }
 
-  getUsers(){
-    this.http.get('https://localhost:5001/api/users').subscribe(response=>{
-      this.users=response;
+  // getUsers(){
+  //   this.http.get('https://localhost:5001/api/users').subscribe(response=>{
+  //     this.users=response;
+  //   }, error=>{
+  //     console.log(error);
+  //   })
+
+  // }
+
+  getSongs(){
+    this.http.get('https://localhost:5001/api/song').subscribe(response=>{
+      this.song=response;
     }, error=>{
       console.log(error);
     })
-
   }
 
 
