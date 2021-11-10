@@ -13,5 +13,8 @@ namespace API.Data
         {
         }
         public DbSet<AppUser> Users { get; set; }
+        public DbSet<AppSongs> Songs { get; set; }
+        // public DbSet<AppSongCategory> Categories { get; set; }
+
     }
 }
