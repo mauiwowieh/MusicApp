@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
 
   registerMode=false;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }

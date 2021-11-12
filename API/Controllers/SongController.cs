@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using API.Data;
+using API.DTOs;
 using API.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +31,18 @@ namespace API.Controllers
         public async Task<ActionResult<AppSongs>> GetSongs(int id){
             return await _context.Songs.FindAsync(id);
             
+        }
+
+        // [HttpPut]
+        // public Task<ActionResult> UpdateSongRequest(SongUpdateDto songUpdateDto){
+        //     // var songUrl = Song.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        //     SongDto.songUrl=songUpdateDto.songUrl;
+            
+        // }
+
+        [HttpDelete("delete-song/{songId}")]
+        public async Task<ActionResult> DeleteSong(){
+            return NotFound();
         }
     }
 }

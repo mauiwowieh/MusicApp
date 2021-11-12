@@ -19,6 +19,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
 import { ErrorInterceptor } from './_interceptors/error.interceptor';
 import { SongCardComponent } from './songs/song-card/song-card.component';
+import { SongDetailsComponent } from './songs/song-details/song-details.component';
+import { SongEditComponent } from './songs/song-edit/song-edit.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { SongCardComponent } from './songs/song-card/song-card.component';
     SongsComponent,
     AboutComponent,
     TestErrorsComponent,
-    SongCardComponent
+    SongCardComponent,
+    SongDetailsComponent,
+    SongEditComponent
   ],
   imports: [
     BrowserModule,

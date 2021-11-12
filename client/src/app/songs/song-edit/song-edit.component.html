@@ -1,0 +1,13 @@
+<div class="card mb-4">
+    <div class="card-wrapper">
+        <div class="card-body p-1">
+            
+            <div class="form-group text-center">
+                <button form="editForm" type="submit" class="btn btn-success mr-2 mt-3" >Save changes</button>
+            </div>
+        </div>
+        <form #editForm="ngForm" id="editForm" (ngSubmit)="updateSong()">
+            <textarea class="form-control" [(ngModel)]="song.songEdited" name="introduction"></textarea>
+        </form>
+    </div>
+</div>

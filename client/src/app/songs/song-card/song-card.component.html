@@ -9,6 +9,17 @@
             <p class="card-text text-muted text-center">{{song.songEntered}}</p>
             <p class="card-text text-muted text-center">{{song.songEdited}}</p>
             <p class="card-text text-muted text-center">{{song.songCategory}}</p>
+            <ul class="list-inline member-icons animate text-center">
+                <li class="list-inline-item"><button routerLink='/song/edit' class="btn btn-primary">
+                    <i class="fa fa-plus-square-o"></i></button>
+                </li>
+                <li class="list-inline-item"><button routerLink='/song/edit' class="btn btn-primary">
+                    <i class="fa fa-pencil-square-o"></i></button>
+                </li>
+                <li class="list-inline-item"><button class="btn btn-primary">
+                    <i class="fa fa-trash-o"></i></button>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
