@@ -39,6 +39,18 @@ namespace API.Data
 
         }
 
+        // public async Task<PagedList<SongDto>> GetMembersAsync(SongParams songParams)
+        // {
+        //     return await _context.Users 
+        //         .ProjectTo<SongDto>(_mapper.ConfigurationProvider)
+        //         .ToListAsync();
+        //     var query = _context.Users.AsQueryable(); 
+
+        //     return await PagedList<SongDto>.CreateAsync(query.ProjectTo<SongDto>(_mapper
+        //         .ConfigurationProvider).AsNoTracking(), 
+        //             songParams.PageNumber, songParams.PageSize);
+        // }
+
         public async Task<bool> SaveAllAsync()
         {
             return await _context.SaveChangesAsync()>0;

@@ -31,6 +31,21 @@ namespace API.Controllers
             return await _context.Songs.ToListAsync();
             
         }
+        
+        // [HttpGet]
+        // public async Task<ActionResult<IEnumerable<SongDto>>> GetSongs([FromQuery]SongParams songParams){
+        //     var song = await _songRepository.GetSongBySongName(Song.GetSong());
+        //     if(string.IsNullOrEmpty(songParams.IsFavourite))
+        //       songParams.IsFavourite = song.IsFavourite == "true" ? "false" : "true";
+        //    
+        //     var songs= await _songRepository.GetSongs(songParams);
+
+        //     Response.AddPaginationHeader(songs.CurrentPage, songs.PageSize,
+        //     songs.TotalCount, songs.TotalPages);
+
+        //     return Ok(songs);
+            
+        // }
 
         //api/songs/3
         [HttpGet("{id}")]
