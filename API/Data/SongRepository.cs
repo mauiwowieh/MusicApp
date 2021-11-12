@@ -35,7 +35,7 @@ namespace API.Data
         public async Task<IEnumerable<AppSongs>> GetSongsAsync()
         {
             return await _context.Songs.ToListAsync();
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
 
         }
 
@@ -44,9 +44,9 @@ namespace API.Data
             return await _context.SaveChangesAsync()>0;
         }
 
-        public void Update(AppSongs user)
+        public void Update(AppSongs songs)
         {
-            _context.Entry(user).State=Microsoft.EntityFrameworkCore.EntityState.Modified;
+            _context.Entry(songs).State=EntityState.Modified;
         }
     }
 }

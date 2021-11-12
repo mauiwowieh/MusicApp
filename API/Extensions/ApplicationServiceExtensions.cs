@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using API.Data;
 using API.Interfaces;
 using API.Services;
@@ -17,10 +13,11 @@ namespace API.Extensions
         {
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<ISongRepository, SongRepository>();
-
-            services.AddDbContext<DataContext>(options=>{
-                options.UseSqlite(config.GetConnectionString("DefaultConnection"));                
+            services.AddDbContext<DataContext>(options =>
+            {
+                options.UseSqlite(config.GetConnectionString("DefaultConnection"));
             });
+
             return services;
         }
     }

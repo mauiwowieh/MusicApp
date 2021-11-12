@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Entities;
 
 namespace API.DTOs
 {
@@ -15,7 +16,7 @@ namespace API.DTOs
         public bool isFavourite { get; set; }
         public DateTime songEntered { get; set; }
         public DateTime songEdited { get; set; }
-        public string songCategory { get; set; }
+        public ICollection<AppSongCategory> songCategory { get; set; }
   
     }
 }

@@ -1,12 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Song } from '../_models/song';
+import { ReplaySubject } from 'rxjs';
+import { map } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class SongsService {
   baseUrl = 'https://localhost:5001/api/';
+  song: Song;
 
   constructor(private http: HttpClient) { }
 
@@ -14,8 +18,8 @@ export class SongsService {
     return this.http.get<Song[]>(this.baseUrl + 'song');
   }
 
-  getSong(songname: string){
-    return this.http.get<Song>(this.baseUrl+'song/'+songname);
+  getSong(songName: string){
+    return this.http.get<Song>(this.baseUrl+'song/'+songName);
   }
   searchMusic(songname: string, type='songName'){
     return this.http.get<Song>(this.baseUrl+'song/?query='+songname+'&offset=0&limit=20&type='+type);

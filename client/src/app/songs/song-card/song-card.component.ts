@@ -10,12 +10,21 @@ import { SongsService } from 'src/app/_services/songs.service';
 export class SongCardComponent implements OnInit {
 
   @Input() song: Song;
-  constructor(private songsService: SongsService) { }
+  songs: Song[];
+
+  constructor(private songService: SongsService) { }
 
   ngOnInit(): void {
+    this.loadSongs();
+
   }
 
-  
+  loadSongs(){
+    this.songService.getSongs().subscribe(songs =>{
+      this.songs=songs;
+    }
+      )
+  }
 
 
 }

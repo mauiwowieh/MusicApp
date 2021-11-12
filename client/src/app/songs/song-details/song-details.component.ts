@@ -10,7 +10,7 @@ import { SongsService } from 'src/app/_services/songs.service';
 })
 export class SongDetailsComponent implements OnInit {
 
-  @Input() songsFromSongComponent: any;
+  //@Input() songsFromSongComponent: any;
   song: Song;
 
   constructor(private songsService: SongsService, private route: ActivatedRoute) { }
@@ -20,7 +20,7 @@ export class SongDetailsComponent implements OnInit {
   }
 
   loadSong(){
-    this.songsService.getSong(this.route.snapshot.paramMap.get('songname')).subscribe(song =>
+    this.songsService.getSong(this.route.snapshot.paramMap.get('songName')).subscribe(song =>
       {
         this.song=song;
 

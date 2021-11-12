@@ -9,7 +9,7 @@ namespace API.Interfaces
 {
     public interface ISongRepository
     {
-        void Update(AppSongs user);
+        void Update(AppSongs songs);
         Task<IEnumerable<AppSongs>> GetSongsAsync();
         Task<AppSongs> GetSongByIdAsync(int id);
         Task<AppSongs> GetSongBySongNameAsync(string songname);
