@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { Song } from 'src/app/_models/song';
 import { SongsService } from 'src/app/_services/songs.service';
@@ -10,9 +11,11 @@ import { SongsService } from 'src/app/_services/songs.service';
 export class SongCardComponent implements OnInit {
 
   @Input() song: Song;
+  baseUrl = 'https://localhost:5001/api/';
+
   songs: Song[];
 
-  constructor(private songService: SongsService) { }
+  constructor(private http: HttpClient, private songService: SongsService) { }
 
   ngOnInit(): void {
     this.loadSongs();
@@ -24,6 +27,10 @@ export class SongCardComponent implements OnInit {
       this.songs=songs;
     }
       )
+  }
+
+  deleteSong(songId:number){
+    return this.http.delete(this.baseUrl + 'song/delete-photo/' + songId);
   }
 
 

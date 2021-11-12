@@ -21,6 +21,7 @@ import { ErrorInterceptor } from './_interceptors/error.interceptor';
 import { SongCardComponent } from './songs/song-card/song-card.component';
 import { SongDetailsComponent } from './songs/song-details/song-details.component';
 import { SongEditComponent } from './songs/song-edit/song-edit.component';
+import { SongAddComponent } from './songs/song-add/song-add.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SongEditComponent } from './songs/song-edit/song-edit.component';
     TestErrorsComponent,
     SongCardComponent,
     SongDetailsComponent,
-    SongEditComponent
+    SongEditComponent,
+    SongAddComponent
   ],
   imports: [
     BrowserModule,

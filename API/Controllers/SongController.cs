@@ -71,7 +71,29 @@ namespace API.Controllers
 
         [HttpDelete("delete-song/{songId}")]
         public async Task<ActionResult> DeleteSong(){
+            //var song = await _songRepository.GetSongByIdAsync(Song.GetSongBySongNameAsync());
+
+            // var song=song.Songs.FirstOrDefaultAsync(x =>{
+            //     x.Id==songId;
+            // });
+
             return NotFound();
+
+            //if(await _context.SaveChanges()) return Ok();
         }
+
+        [HttpPost("add-photo")]
+        public async Task<ActionResult> AddSong(){
+            //var song = await _songRepository.GetSongByIdAsync(Song.GetSongBySongNameAsync());
+
+            // var song=song.Songs.FirstOrDefaultAsync(x =>{
+            //     x.Id==songId;
+            // });
+
+            return NotFound();
+            
+        }
+
+
     }
 }

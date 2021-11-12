@@ -16,11 +16,11 @@
                 <li class="list-inline-item"><button routerLink='/song/edit' class="btn btn-primary">
                     <i class="fa fa-pencil-square-o"></i></button>
                 </li>
-                <li class="list-inline-item"><button class="btn btn-primary">
+                <li class="list-inline-item"><button (click)="deleteSong(song.id)" class="btn btn-primary">
                     <i class="fa fa-trash-o"></i></button>
                 </li>
             </ul>
-            <button type="submit" (keyup)="loadSongs()">Pogledaj</button>
+            <button type="submit" (keyup)="loadSongs()" class="btn btn-success">Pogledaj</button>
         </div>
     </div>
 </div>
