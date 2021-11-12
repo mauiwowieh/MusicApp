@@ -1,1 +1,7 @@
-<p>songs works!</p>
+<app-search></app-search>
+<div class="row">
+    <div *ngFor="let song of songs" class="col-2">
+        <app-song-card [song]="song"></app-song-card>
+    </div>
+    
+</div>

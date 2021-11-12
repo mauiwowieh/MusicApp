@@ -18,6 +18,7 @@ import { AboutComponent } from './about/about.component';
 import { ToastrModule } from 'ngx-toastr';
 import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
 import { ErrorInterceptor } from './_interceptors/error.interceptor';
+import { SongCardComponent } from './songs/song-card/song-card.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ErrorInterceptor } from './_interceptors/error.interceptor';
     SearchComponent,
     SongsComponent,
     AboutComponent,
-    TestErrorsComponent
+    TestErrorsComponent,
+    SongCardComponent
   ],
   imports: [
     BrowserModule,

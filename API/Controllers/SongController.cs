@@ -20,15 +20,14 @@ namespace API.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        public async Task<ActionResult<IEnumerable<AppSongs>>> GetUsers(){
+        public async Task<ActionResult<IEnumerable<AppSongs>>> GetSongs(){
             return await _context.Songs.ToListAsync();
             
         }
 
         //api/songs/3
-        [Authorize]
         [HttpGet("{id}")]
-        public async Task<ActionResult<AppSongs>> GetUser(int id){
+        public async Task<ActionResult<AppSongs>> GetSongs(int id){
             return await _context.Songs.FindAsync(id);
             
         }
