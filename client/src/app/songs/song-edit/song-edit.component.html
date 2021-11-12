@@ -4,8 +4,8 @@
             
             <div class="form-group text-center">
                 <form #editForm="ngForm" id="editForm" (ngSubmit)="updateSong()">
-                    <h4 class="mt-2">Artist name update:</h4>
-                    <textarea class="form-control" [(ngModel)]="song.artistName" name="artistName"></textarea>
+                    <h4 class="mt-2">Nisam uopste mislila staviti mogucnost da se url moze editovati, ali svakako se to ne edituje :smileyface:</h4>
+                    <textarea class="form-control" [(ngModel)]="song.songUrl" name="songUrl"></textarea>
                     <button form="editForm" type="submit" class="btn btn-success mr-2 mt-3" >Save changes</button>
                 </form>
             </div>

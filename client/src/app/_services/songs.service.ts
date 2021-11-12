@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class SongsService {
   baseUrl = 'https://localhost:5001/api/';
-  song: Song;
+  song: Song[] = [];
 
   constructor(private http: HttpClient) { }
 
